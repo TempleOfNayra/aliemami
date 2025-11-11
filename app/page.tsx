@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -6,22 +6,35 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-6 py-16 sm:px-8 lg:px-12">
         {/* Header */}
         <header className="mb-16">
-          <h1 className="text-5xl font-bold text-slate-900 dark:text-slate-50 mb-4">
-            Ali Emami
-          </h1>
-          <p className="text-2xl text-slate-700 dark:text-slate-300 mb-6">
-            Senior Full-Stack Engineer | AI Product Architect | Founder, EDGECASE LLC
-          </p>
-          <div className="flex flex-wrap gap-4 text-slate-600 dark:text-slate-400">
-            <a href="mailto:ali.emami@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              ali.emami@gmail.com
-            </a>
-            <span>|</span>
-            <a href="https://linkedin.com/in/aliemami" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              linkedin.com/in/aliemami
-            </a>
-            <span>|</span>
-            <span>New York, NY</span>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-xl ring-4 ring-slate-200 dark:ring-slate-700 flex-shrink-0">
+              <Image
+                src="/profile.png"
+                alt="Ali Emami"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-5xl font-bold text-slate-900 dark:text-slate-50 mb-4">
+                Ali Emami
+              </h1>
+              <p className="text-2xl text-slate-700 dark:text-slate-300 mb-6">
+                Senior Full-Stack Engineer | AI Product Architect | Founder, EDGECASE LLC
+              </p>
+              <div className="flex flex-wrap gap-4 text-slate-600 dark:text-slate-400 justify-center md:justify-start">
+                <a href="mailto:ali.emami@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  ali.emami@gmail.com
+                </a>
+                <span>|</span>
+                <a href="https://linkedin.com/in/aliemami" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  linkedin.com/in/aliemami
+                </a>
+                <span>|</span>
+                <span>New York, NY</span>
+              </div>
+            </div>
           </div>
         </header>
 
